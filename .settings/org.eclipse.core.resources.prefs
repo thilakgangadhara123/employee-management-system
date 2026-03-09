@@ -1,2 +1,13 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/adminViewAttendance.jsp=UTF-8
+encoding//src/main/webapp/adminnav.jsp=UTF-8
+encoding//src/main/webapp/adminrig.jsp=UTF-8
+encoding//src/main/webapp/employeehome.jsp=UTF-8
+encoding//src/main/webapp/empnav.jsp=UTF-8
+encoding//src/main/webapp/emprig.jsp=UTF-8
+encoding//src/main/webapp/index.jsp=UTF-8
+encoding//src/main/webapp/markAttendance.jsp=UTF-8
+encoding//src/main/webapp/profile.jsp=UTF-8
+encoding//src/main/webapp/viewAttendance.jsp=UTF-8
+encoding//src/main/webapp/viewEmployees.jsp=UTF-8
 encoding/<project>=UTF-8

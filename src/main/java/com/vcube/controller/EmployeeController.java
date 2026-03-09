@@ -24,6 +24,8 @@ public class EmployeeController extends HttpServlet {
 	long phno=Long.parseLong(request.getParameter("phno"));
 	String username=request.getParameter("username");
 	String password=request.getParameter("password");
+	String department = request.getParameter("department");
+	double salary = Double.parseDouble(request.getParameter("salary"));
 	
 	Employee e=new Employee();
 	e.setFname(fname);
@@ -32,15 +34,17 @@ public class EmployeeController extends HttpServlet {
 	e.setPhno(phno);
 	e.setUsername(username);
 	e.setPassword(password);
+	e.setDepartment(department);
+	e.setSalary(salary);
 	
 	EmployeeDao ed=new EmployeeDao();
 	String status=ed.insertemployee(e);
 	
 	if(status.equals("success")) {
-		RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("emplogin.jsp");
 		rd.forward(request, response);
 	}else {
-		RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("emprig.jsp");
 		rd.forward(request, response);
 	}
 	

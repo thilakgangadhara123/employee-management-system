@@ -1,24 +1,26 @@
 package com.vcube.Dto;
 
 public class Employee {
+	private int id;
 	private String fname;
 	private String lname;
 	private String email;
 	private long phno;
 	private String username;
 	private String password;
+	private String department;
+	private double salary;
 
 	public Employee() {
-
+		
 	}
 
-	public Employee(String fname, String lname, String email, int phno, String username, String password) {
-		this.fname = fname;
-		this.lname = lname;
-		this.email = email;
-		this.phno = phno;
-		this.username = username;
-		this.password = password;
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFname() {
@@ -68,6 +70,38 @@ public class Employee {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public Employee(int id, String fname, String lname, String email, long phno, String username, String password,
+			String department, double salary) {
+		super();
+		this.id = id;
+		this.fname = fname;
+		this.lname = lname;
+		this.email = email;
+		this.phno = phno;
+		this.username = username;
+		this.password = password;
+		this.department = department;
+		this.salary = salary;
+	}
+
+
 
 	@Override
 	public String toString() {

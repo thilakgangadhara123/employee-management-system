@@ -1,131 +1,121 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Employee Management System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>INDEX PAGE</title>
 
-<!-- ✅ Bootstrap 4 CDN -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
+/* ===== Smooth Professional Background ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0f7fa 0%, #e8f0fe 50%, #f3e5f5 100%);
+}
+
+/* ===== Page Heading ===== */
+h1 {
+    color: #111827;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ===== Card Container ===== */
+.card-box {
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: 0.4s ease;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ===== Hover Effect ===== */
+.card-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ===== Specific Card Gradients ===== */
+.admin-card {
+    background: linear-gradient(135deg, rgba(0, 145, 255, 0.85), rgba(0, 100, 200, 0.85));
+    color: white;
+}
+
+.employee-card {
+    background: linear-gradient(135deg, rgba(255, 130, 180, 0.85), rgba(255, 190, 120, 0.85));
+    color: white;
+}
+
+/* ===== Card Titles & Text ===== */
+.card-box h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-box p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* ===== Buttons ===== */
+.btn-custom {
+    background: rgba(255, 255, 255, 0.9);
+    color: #111827;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: #111827;
+    color: #ffffff;
+    text-decoration: none;
+}
+</style>
 </head>
+
 <body>
-	<!-- Include Navbar -->
-	<%@ include file="nav.jsp"%>
 
-	<!-- ✅ Carousel Section -->
-	<div class="container mt-4">
-		<div id="demoCarousel" class="carousel slide" data-ride="carousel">
+<div class="container text-center">
 
-			<!-- Indicators -->
-			<ul class="carousel-indicators">
-				<li data-target="#demoCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#demoCarousel" data-slide-to="1"></li>
-				<li data-target="#demoCarousel" data-slide-to="2"></li>
-			</ul>
+    <h1>Employee Management System</h1>
 
-			<div class="carousel-inner rounded shadow">
-				<div class="carousel-item active">
-					<img src="cmp1.jpg" class="d-block w-100" alt="img1"
-						style="height: 500px; object-fit: cover;">
-					<div
-						class="carousel-caption d-none d-md-block bg-dark text-white rounded"
-						style="opacity: 0.8;">
-						<h5>Welcome to MyCompany</h5>
-						<p>We offer the best tech services.</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="cmp4.jpg" class="d-block w-100" alt="img2"
-						style="height: 500px; object-fit: cover;">
-					<div
-						class="carousel-caption d-none d-md-block bg-dark text-white rounded"
-						style="opacity: 0.8;">
-						<h5>Empowering Innovation</h5>
-						<p>Partner with us for a digital future.</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="cmp5.jpg" class="d-block w-100" alt="img3"
-						style="height: 500px; object-fit: cover;">
-					<div
-						class="carousel-caption d-none d-md-block bg-dark text-white rounded"
-						style="opacity: 0.8;">
-						<h5>Trusted by Top Companies</h5>
-						<p>We deliver results that matter.</p>
-					</div>
-				</div>
-			</div>
+    <div class="row justify-content-center g-4">
 
-			<!-- Carousel Controls -->
-			<a class="carousel-control-prev" href="#demoCarousel" role="button"
-				data-slide="prev"> <span class="carousel-control-prev-icon"></span>
-			</a> <a class="carousel-control-next" href="#demoCarousel" role="button"
-				data-slide="next"> <span class="carousel-control-next-icon"></span>
-			</a>
-		</div>
-	</div>
+        <!-- Admin Panel -->
+        <div class="col-md-4">
+            <div class="card-box admin-card">
+                <h3>Admin Panel</h3>
+                <p>Manage employees, departments, attendance, and system settings.</p>
+                <a href="adminrig.jsp" class="btn btn-custom">Go to Admin</a>
+            </div>
+        </div>
 
-	<!-- ✅ Registration Form -->
-	<div class="container my-5">
-		<div class="row justify-content-center">
-			<div class="col-md-6">
-				<div class="card shadow-lg p-4">
-					<h4 class="text-center mb-4">Employee Registration</h4>
+        <!-- Employee Panel -->
+        <div class="col-md-4">
+            <div class="card-box employee-card">
+                <h3>Employee Panel</h3>
+                <p>Access dashboard, view attendance, and update your profile.</p>
+                <a href="emprig.jsp" class="btn btn-custom">Go to Employee</a>
+            </div>
+        </div>
 
-					<form name="registration" method="post" action="EmployeeController">
+    </div>
+</div>
 
-						<div class="form-row mb-3">
-							<div class="col-md-6 mb-2 mb-md-0">
-								<input type="text" name="fname" id="fname"
-									placeholder="First Name" class="form-control" required>
-							</div>
-							<div class="col-md-6">
-								<input type="text" name="lname" id="lname"
-									placeholder="Last Name" class="form-control" required>
-							</div>
-						</div>
-
-						<div class="form-row mb-3">
-							<div class="col-md-6 mb-2 mb-md-0">
-								<input type="email" name="email" id="email" placeholder="Email"
-									class="form-control" required>
-							</div>
-							<div class="col-md-6">
-								<input type="tel" name="phno" id="phno"
-									placeholder="Mobile Number" class="form-control"
-									pattern="[0-9]{10}" required>
-							</div>
-						</div>
-
-						<div class="form-row mb-3">
-							<div class="col-md-6 mb-2 mb-md-0">
-								<input type="text" name="username" id="username"
-									placeholder="Username" class="form-control" required>
-							</div>
-							<div class="col-md-6">
-								<input type="password" name="password" id="password"
-									placeholder="Password" class="form-control" required>
-							</div>
-						</div>
-
-						<div class="text-center">
-							<button type="submit" class="btn btn-success px-4">Submit</button>
-						</div>
-
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
